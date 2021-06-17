@@ -35,43 +35,13 @@ $ python3 setup.py install
 Download db file for first time:
 
 ```
-$ python3 -m ipscoop.IpScoop('8.8.8.8')
+$ python3 -m ipscoop -data 8.8.8.8
 ```
 
-Get all ip data:
+Usage:
 
 ```
-$ python3 -m ipscoop.IpScoop('8.8.8.8').data
-```
-
-Get ip cidr:
-
-```
-$ python3 -m ipscoop.IpScoop('8.8.8.8').cidr
-```
-
-Get ip range:
-
-```
-$ python3 -m ipscoop.IpScoop('8.8.8.8').range
-```
-
-Get ip country:
-
-```
-$ python3 -m ipscoop.IpScoop('8.8.8.8').country
-```
-
-Get ip timezone id:
-
-```
-$ python3 -m ipscoop.IpScoop('8.8.8.8').tzid
-```
-
-Get ip geo:
-
-```
-$ python3 -m ipscoop.IpScoop('8.8.8.8').geo
+$ python3 -m ipscoop -h
 ```
 
 ## Getting Started
