@@ -1,2 +1,2 @@
 # ipscoop
-Fast IP address lookup 
+Fast IP Scoop
