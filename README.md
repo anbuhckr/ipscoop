@@ -3,7 +3,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/anbuhckr/ipscoop)](https://github.com/anbuhckr/ipscoop/issues)
 [![GitHub forks](https://img.shields.io/github/forks/anbuhckr/ipscoop)](https://github.com/anbuhckr/ipscoop/network)
 [![GitHub stars](https://img.shields.io/github/stars/anbuhckr/ipscoop)](https://github.com/anbuhckr/ipscoop/stargazers)
-[![GitHub license](https://img.shields.io/github/license/anbuhckr/ipscoop)](https://github.com/anbuhckr/ipscoop/blob/main/LICENSE)
 ![PyPI - Python Version](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)
 
 Fast IP Scoop
