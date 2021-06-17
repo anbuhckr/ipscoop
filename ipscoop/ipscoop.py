@@ -27,7 +27,18 @@ class IpScoop():
         self.tzid = self.data['tzid']
         self.geo = {'lat': self.data['lat'], 'lon': self.data['lon']}
         
+def download_data():
+    import urllib3
+    urllib3.disable_warnings()
+    url = 'https://github.com/anbuhckr/ipscoop/releases/download/v0.1.0/rbs_db.mmdb'
+    with urllib3.PoolManager() as http:
+        r = http.request('GET', url)
+        with open(DB_FILE, 'wb') as fout:
+            fout.write(r.data)
+        
 if __name__ == '__main__':
+    if not os.path.exists(DB_FILE):
+        download_data()
     if args.data:
         ip_scoop = IpScoop(args.data)
         print(ip_scoop.data)
