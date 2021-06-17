@@ -67,10 +67,10 @@ print(f'range: {ip_scoop.range}')
 print(f'country: {ip_scoop.country}')
 
 #timezone id 
-print(f'timezoneid: {ip_scoop.tzid}'))
+print(f'timezoneid: {ip_scoop.tzid}')
 
 #geo 
-print(f'geo: {ip_scoop.geo}'))
+print(f'geo: {ip_scoop.geo}')
 ```
 
 ## Ref
