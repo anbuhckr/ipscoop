@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import maxminddb, os
+import maxminddb, os, sys
 from argparse import ArgumentParser
 
 parser = ArgumentParser()    
