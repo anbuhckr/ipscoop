@@ -49,7 +49,7 @@ $ python3 -m ipscoop -h
 ``` python
 #! /usr/bin/env python3
 
-ftom ipscoop import IpScoop
+from ipscoop import IpScoop
 
 #load ip
 ip_scoop = IpScoop('8.8.8.8')
