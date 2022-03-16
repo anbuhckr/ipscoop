@@ -10,8 +10,8 @@ MD_FILE = os.path.join(PACKAGE_DIR, 'MD5.txt')
 class IpScoop():
 
     def __init__(self, ip:str) -> None:
-        self.download_data()
-        self.check_md5()         
+#         self.download_data()
+#         self.check_md5()         
         self.ip = ip
         self.reader = maxminddb.open_database(DB_FILE)
         self.data = self.reader.get(self.ip)
