@@ -4,4 +4,4 @@ from __future__ import unicode_literals
 
 from .ipscoop import IpScoop
 
-__version__ = '0.1.2'
+__version__ = '1.0.0'
