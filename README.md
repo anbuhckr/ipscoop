@@ -41,12 +41,7 @@ $ python3 -m ipscoop -data 8.8.8.8
 Usage:
 
 ```
-$ python3 -m ipscoop -h
-```
-
-MMDB format:
-```
-{cidr: {'cidr': 'xxx', 'range': 'xxx', 'country': 'xxx', 'lat': 'xxx', 'lon': 'xxx', 'acc': 'xxx', 'tzid': 'xxx', 'isp': 'xxx', 'asn': 'xxx', 'org': 'xxx'})
+$ python3 -m ipscoop -ip 8.8.8.8
 ```
 
 ## Getting Started
@@ -59,38 +54,15 @@ from ipscoop import IpScoop
 #load ip
 ip_scoop = IpScoop('ipscoop.mmdb')
 
-#all data 
-print(f'data: {ip_scoop.data('8.8.8.8')}')
-
+#all data
+data = ip_scoop.data('8.8.8.8')
+if data:
+    print(f'data: {data}')
+else:
+    print('Data not found!')
+  
 #cidr
-print(f'cidr: {ip_scoop.cidr('8.8.8.8')}')
-
-#range
-print(f'range: {ip_scoop.range('8.8.8.8')}')
-
-#country
-print(f'country: {ip_scoop.country('8.8.8.8')}')
-
-#timezone id 
-print(f'timezoneid: {ip_scoop.tzid('8.8.8.8')}')
-
-#latitude
-print(f'latitude: {ip_scoop.lat('8.8.8.8')}')
-
-#longitude
-print(f'longitude: {ip_scoop.lon('8.8.8.8')}')
-
-#accuracy
-print(f'accuracy: {ip_scoop.acc('8.8.8.8')}')
-
-#isp
-print(f'isp: {ip_scoop.isp('8.8.8.8')}')
-
-#asn
-print(f'asn: {ip_scoop.asn('8.8.8.8')}')
-
-#organization
-print(f'organization: {ip_scoop.org('8.8.8.8')}')
+print(f'cidr: {data.cidr}')
 ```
 
 ## Ref
