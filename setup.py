@@ -18,8 +18,7 @@ with open('ipscoop/__init__.py', 'rb') as f:
 
 requirements = [    
     'maxminddb>=2.0.3',
-    'requests>=2.25.1',
-    'tqdm>=4.61.0',
+    'ipaddress>=1.0.23',
 ]
 
 
