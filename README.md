@@ -74,8 +74,23 @@ print(f'country: {ip_scoop.country('8.8.8.8')}')
 #timezone id 
 print(f'timezoneid: {ip_scoop.tzid('8.8.8.8')}')
 
-#geo 
-print(f'geo: {ip_scoop.geo('8.8.8.8')}')
+#latitude
+print(f'latitude: {ip_scoop.lat('8.8.8.8')}')
+
+#longitude
+print(f'longitude: {ip_scoop.lon('8.8.8.8')}')
+
+#accuracy
+print(f'accuracy: {ip_scoop.acc('8.8.8.8')}')
+
+#isp
+print(f'isp: {ip_scoop.isp('8.8.8.8')}')
+
+#asn
+print(f'asn: {ip_scoop.asn('8.8.8.8')}')
+
+#organization
+print(f'organization: {ip_scoop.org('8.8.8.8')}')
 ```
 
 ## Ref
