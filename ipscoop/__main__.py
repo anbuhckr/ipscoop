@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import ipscoop, sys, ipaddress
+import ipscoop, sys
 from argparse import ArgumentParser
 
 parser = ArgumentParser()
@@ -25,82 +25,27 @@ if __name__ == '__main__':
         print("mmdb file not found!")
         sys.exit(1)
     if args.data:
-        try:
-            ip = ipaddress.ip_address(args.data)
-            print(ip_scoop.data(str(ip)))
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.data(args.data))
     elif args.cidr:
-        try:
-            ip = ipaddress.ip_address(args.cidr)
-            print(ip_scoop.data(str(ip)).cidr)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.cidr(args.cidr))
     elif args.range:
-        try:
-            ip = ipaddress.ip_address(args.range)
-            print(ip_scoop.data(str(ip)).range)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.range(args.range))
     elif args.country:
-        try:
-            ip = ipaddress.ip_address(args.country)
-            print(ip_scoop.data(str(ip)).country)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.country(args.country))
     elif args.tzid:
-        try:
-            ip = ipaddress.ip_address(args.tzid)
-            print(ip_scoop.data(str(ip)).tzid)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.tzid(args.tzid))
     elif args.lat:
-        try:
-            ip = ipaddress.ip_address(args.lat)
-            print(ip_scoop.data(str(ip)).lat)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.lat(args.lat))
     elif args.lon:
-        try:
-            ip = ipaddress.ip_address(args.lon)
-            print(ip_scoop.data(str(ip)).lon)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.lon(args.lon))
     elif args.acc:
-        try:
-            ip = ipaddress.ip_address(args.acc)
-            print(ip_scoop.data(str(ip)).acc)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.acc(args.acc))
     elif args.isp:
-        try:
-            ip = ipaddress.ip_address(args.isp)
-            print(ip_scoop.data(str(ip)).isp)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.isp(args.isp))
     elif args.asn:
-        try:
-            ip = ipaddress.ip_address(args.asn)
-            print(ip_scoop.data(str(ip)).asn)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.asn(args.asn))
     elif args.org:
-        try:
-            ip = ipaddress.ip_address(args.org)
-            print(ip_scoop.data(str(ip)).org)
-        except:
-            print("Not valid IPv4/IPv6 address!")
-            sys.exit(1)
+        print(ip_scoop.org(args.org))
     else:
         print('usage: ipscoop.py [-h]')
         sys.exit(1)
