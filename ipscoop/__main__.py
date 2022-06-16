@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 
 parser = ArgumentParser()
 parser.add_argument('-db', help="mmdb path",default='ipscoop.mmdb', type=str)
-parser.add_argument('-ip', help="show ip data", default=None, type=str)
+parser.add_argument('-ip', help="ip address", default=None, type=str)
 args = parser.parse_args()
 
 if __name__ == '__main__':
