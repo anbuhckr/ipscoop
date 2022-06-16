@@ -44,6 +44,11 @@ Usage:
 $ python3 -m ipscoop -h
 ```
 
+MMDB format:
+```
+{cidr: {'cidr': 'xxx', 'range': 'xxx', 'country': 'xxx', 'lat': 'xxx', 'lon': 'xxx', 'acc': 'xxx', 'tzid': 'xxx', 'isp': 'xxx', 'asn': 'xxx', 'org': 'xxx'})
+```
+
 ## Getting Started
 
 ``` python
@@ -52,25 +57,25 @@ $ python3 -m ipscoop -h
 from ipscoop import IpScoop
 
 #load ip
-ip_scoop = IpScoop('8.8.8.8')
+ip_scoop = IpScoop('ipscoop.mmdb')
 
 #all data 
-print(f'data: {ip_scoop.data}')
+print(f'data: {ip_scoop.data('8.8.8.8')}')
 
 #cidr
-print(f'cidr: {ip_scoop.cidr}')
+print(f'cidr: {ip_scoop.cidr('8.8.8.8')}')
 
 #range
-print(f'range: {ip_scoop.range}')
+print(f'range: {ip_scoop.range('8.8.8.8')}')
 
 #country
-print(f'country: {ip_scoop.country}')
+print(f'country: {ip_scoop.country('8.8.8.8')}')
 
 #timezone id 
-print(f'timezoneid: {ip_scoop.tzid}')
+print(f'timezoneid: {ip_scoop.tzid('8.8.8.8')}')
 
 #geo 
-print(f'geo: {ip_scoop.geo}')
+print(f'geo: {ip_scoop.geo('8.8.8.8')}')
 ```
 
 ## Ref
