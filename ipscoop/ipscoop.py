@@ -16,97 +16,10 @@ class IpScoop():
         try:
             ip = ipaddress.ip_address(ip)
             data = self.reader.get(str(ip))
-            return CustomDict(data)
+            result = CustomDict(data)
+            if result:
+                return result
         except:
+            print("Not valid IPv4/IPv6 address!")
             pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def cidr(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).cidr
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def range(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).range
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def country(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).country
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def tzid(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).tzid
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def lat(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).lat
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def lon(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).lon
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def acc(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).acc
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def isp(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).isp
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def asn(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).asn
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
-
-    def org(self, ip):
-        try:
-            ip = ipaddress.ip_address(ip)
-            data = self.reader.get(str(ip))
-            return CustomDict(data).org
-        except:
-            pass
-        return "Not valid IPv4/IPv6 address!"
+        return None
