@@ -15,7 +15,7 @@ if __name__ == '__main__':
         print("mmdb file not found!")
         sys.exit(1)
     if args.ip:
-        data = ip_scoop.data(args.data)
+        data = ip_scoop.data(args.ip)
         if data:
             print(data)
         else:
