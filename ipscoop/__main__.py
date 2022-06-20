@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
-import ipscoop, utils, sys
+import ipscoop, sys
+from ipscoop import utils
 from argparse import ArgumentParser
 
 parser = ArgumentParser()
