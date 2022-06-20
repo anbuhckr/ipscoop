@@ -32,10 +32,10 @@ $ python3 setup.py install
 
 ## CLI
 
-Download db file for first time:
+Download mmdb:
 
 ```
-$ python3 -m ipscoop -data 8.8.8.8
+$ python3 -m ipscoop --download
 ```
 
 Usage:
