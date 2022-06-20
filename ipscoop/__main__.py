@@ -1,11 +1,14 @@
 #! /usr/bin/env python3
 
-import ipscoop, sys
+import ipscoop, sys, os
 from ipscoop import utils
 from argparse import ArgumentParser
 
+PACKAGE_DIR = os.path.dirname(os.path.realpath(__file__))
+DB_FILE = os.path.join(PACKAGE_DIR, 'ipscoop.mmdb')
+
 parser = ArgumentParser()
-parser.add_argument("-db", help="mmdb path",default="ipscoop.mmdb", type=str)
+parser.add_argument("-db", help="mmdb path",default=DB_FILE, type=str)
 parser.add_argument("-ip", help="ip address", default=None, type=str)
 parser.add_argument("--download", help="download mmdb file", default=False, action="store_true")
 args = parser.parse_args()
