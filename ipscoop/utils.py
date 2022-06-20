@@ -33,3 +33,5 @@ def download():
     else:
         print('Extract ipscoop.mmdb.gz...')
         gunzip()
+        print('Delete ipscoop.mmdb.gz...')
+        os.remove(GZ_FILE)
