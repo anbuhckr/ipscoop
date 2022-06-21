@@ -49,10 +49,14 @@ $ python3 -m ipscoop -ip 8.8.8.8
 ``` python
 #! /usr/bin/env python3
 
+import ipscoop, os
 from ipscoop import IpScoop
 
+ipscoop_path = os.path.dirname(ipscoop.__file__)
+db_path = os.path.join(ipscoop_path, 'ipscoop.mmdb')
+
 #load ip
-ip_scoop = IpScoop('ipscoop.mmdb')
+ip_scoop = IpScoop(db_path)
 
 #all data
 data = ip_scoop.data('8.8.8.8')
