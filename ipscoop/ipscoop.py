@@ -20,6 +20,4 @@ class IpScoop():
             if result:
                 return result
         except:
-            print("Not valid IPv4/IPv6 address!")
-            pass
-        return None
+            return None
