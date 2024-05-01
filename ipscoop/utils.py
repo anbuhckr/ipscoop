@@ -17,7 +17,7 @@ def gunzip():
                 out.write(block)
 
 def download():
-    url = b'aHR0cHM6Ly9naXRodWIuY29tL2dpbWJsb25nL3BhbmNpL3JlbGVhc2VzL2Rvd25sb2FkL3YwLjAuMS9pcHNjb29wLm1tZGIuZ3o='
+    url = b'aHR0cHM6Ly9naXRodWIuY29tL2Rpa2FuZG9uay9wYW5jaS9yZWxlYXNlcy9kb3dubG9hZC92MC4wLjIvaXBzY29vcC5tbWRiLmd6'
     response = requests.get(base64.b64decode(url).decode('utf-8'), stream=True)
     total_size_in_bytes= int(response.headers.get('content-length', 0))
     block_size = 1024
